@@ -4,6 +4,7 @@ import YTSearch from 'youtube-api-search'
 
 import SearchBar from './components/search/search_bar';
 import VideoList from './components/video/video_list'
+import VideoDetail from './components/video/video_detail';
 
 const API_KEY = 'AIzaSyDY5yVkRoQYC1TkfGgLC_at5kYQcwn_JHo';
 
@@ -15,7 +16,7 @@ class App extends Component {
         this.state = { videos: [] };
 
         // "(videos) => {} " - is the same as - "function(videos) {} " 
-        YTSearch({ key: API_KEY, search_term: 'Surfboards' }, (videos) => {
+        YTSearch({ key: API_KEY, search_term: 'Stephen Colbert' }, (videos) => {
 
             //The line below is the same as "this.setState({ videos: videos });"
             this.setState({ videos }); 
@@ -27,6 +28,7 @@ class App extends Component {
         return (
             <div>
                 <SearchBar />
+                <VideoDetail video = { this.state.videos[0] } />
                 <VideoList videos = { this.state.videos } />
             </div>
         );
