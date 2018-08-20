@@ -1,8 +1,6 @@
 import React from 'react';
 
-const VideoDetail = (props) => {
-
-    const video = props.video;
+const VideoDetail = ({video}) => {
 
     if (!video) {
         return <div> Loading... </div>
