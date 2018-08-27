@@ -1,4 +1,5 @@
 ### Tutorial App
+This app will connect to the Youtube Api library and allow us to search for videos and display them in or app.
 
 ---
 
