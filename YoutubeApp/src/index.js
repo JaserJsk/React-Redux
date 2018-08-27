@@ -20,7 +20,7 @@ class App extends Component {
             selectedVideo: null 
         };
 
-        this.videoSearch('Stephen Colbert');
+        this.videoSearch('React Redux');
     }
 
     videoSearch(term) {
