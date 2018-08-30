@@ -1,0 +1,40 @@
+body {
+    background-color: #ecf0f1 !important;
+}
+
+.version {
+    margin-right: auto;
+    margin-left: 16px;
+}
+
+/* Drawer Background */
+.Navigation-drawerPaper-7 {
+    background-color: #ecf0f1 !important;
+}
+
+/* Drawer Header */
+/*
+@media (min-width: 600px) {
+    .Navigation-toolbar-6 {
+        min-height: 184px !important;
+    }
+}
+*/
+
+/* Drawer Back Icon */
+/*
+.parent-span {
+    margin-top: -120px !important;
+}
+*/
+
+
+.MuiToolbar-gutters-46 {
+    padding-right: 0 !important;
+}
+
+@media (min-width: 600px) {
+    .MuiToolbar-gutters-46 {
+        padding-right: 0 !important;
+    }
+}
