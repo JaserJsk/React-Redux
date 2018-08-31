@@ -5,6 +5,9 @@ import classNames from 'classnames';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { withStyles } from '@material-ui/core/styles';
 
+import { info, } from '../../constants/content';
+import { drawer, colors, margins } from '../../constants/variables';
+
 // Imports releted to Appbar & Drawer
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -25,7 +28,7 @@ import HeadPhoneMDI from 'mdi-material-ui/Headphones'
 
 import { mailFolderListItems, otherMailFolderListItems } from './mat_data';
 
-const drawerWidth = 240;
+const drawerWidth = drawer.DRAWER_WIDTH;
 
 const styles = theme => ({
 
@@ -38,7 +41,7 @@ const styles = theme => ({
             easing: theme.transitions.easing.sharp,
             duration: theme.transitions.duration.leavingScreen,
         }),
-        backgroundColor: "#429cd6 " // Blue Appbar Color
+        backgroundColor: colors.APPBAR_COLOR
     },
 
     appBarShift: {
@@ -51,13 +54,13 @@ const styles = theme => ({
     },
 
     menuButton: {
-        marginLeft: 12,
-        marginRight: 36,
+        marginLeft: margins.MENU_BUTTON_LEFT,
+        marginRight: margins.MENU_BUTTON_RIGHT,
     },
 
-    rightToolbar: {
+    toolbarRight: {
         marginLeft: 'auto',
-        marginRight: 12,
+        marginRight: margins.TOOLBAR_RIGHT,
     },
 
     hide: {
@@ -73,8 +76,7 @@ const styles = theme => ({
         justifyContent: 'flex-end',
         padding: '0 8px',
         ...theme.mixins.toolbar,
-
-        backgroundColor: "#ecf0f1" // Light Appbar Color
+        backgroundColor: colors.DRAWER_HEADER_COLOR
     },
 
     /**
@@ -148,11 +150,11 @@ class MatAppBar extends Component {
                                 <MenuIcon />
                             </IconButton>
                             <Typography variant="title" color="inherit" noWrap>
-                                Tinder App
+                                { info.APPLICATION_NAME }
                             </Typography>
 
                             <Hidden smDown>
-                                <section className={classes.rightToolbar} >
+                                <section className={classes.toolbarRight} >
                                     <IconButton color="inherit" aria-label="git">
                                         <GithubMDI />
                                     </IconButton>
@@ -180,7 +182,7 @@ class MatAppBar extends Component {
                         <div className={classes.toolbar}>
 
                             <span className="version">
-                                Version 1.0.0
+                                { info.APPLICATION_VERSION }
                             </span>
 
                             <span className="parent-span">
