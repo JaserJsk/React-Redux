@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
@@ -23,10 +23,8 @@ import Hidden from '@material-ui/core/Hidden';
 
 // Imports releted to Icons
 import GithubMDI from 'mdi-material-ui/GithubCircle';
-import TwitterMDI from 'mdi-material-ui/Twitter'
-import HeadPhoneMDI from 'mdi-material-ui/Headphones'
 
-import { mailFolderListItems, otherMailFolderListItems } from './mat_data';
+import { mailFolderListItems } from './mat_data';
 
 const drawerWidth = drawer.DRAWER_WIDTH;
 
@@ -113,7 +111,6 @@ const styles = theme => ({
 });
 
 class MatAppBar extends Component {
-
     state = {
         open: false,
     };
@@ -142,6 +139,7 @@ class MatAppBar extends Component {
                         className={classNames(classes.appBar, this.state.open && classes.appBarShift)}>
 
                         <Toolbar disableGutters={!this.state.open}>
+
                             <IconButton
                                 color="inherit"
                                 aria-label="Open drawer"
@@ -149,32 +147,27 @@ class MatAppBar extends Component {
                                 className={classNames(classes.menuButton, this.state.open && classes.hide)}>
                                 <MenuIcon />
                             </IconButton>
-                            
+
                             <Typography variant="title" color="inherit" noWrap>
                                 { info.APPLICATION_NAME }
                             </Typography>
 
                             <Hidden smDown>
                                 <section className={classes.toolbarRight} >
-                                    <IconButton color="inherit" aria-label="git">
+                                    <IconButton color="inherit" aria-label="git"
+                                        href="https://github.com/JonasJsk/React-Redux/tree/master/YoutubeApp">
                                         <GithubMDI />
-                                    </IconButton>
-
-                                    <IconButton color="inherit" aria-label="git">
-                                        <TwitterMDI />
-                                    </IconButton>
-
-                                    <IconButton color="inherit" aria-label="git">
-                                        <HeadPhoneMDI />
                                     </IconButton>
                                 </section>
                             </Hidden>
+
                         </Toolbar>
+
                     </AppBar>
 
                     <Drawer
-                        variant="permanent"
-                        classes = {{
+                        variant="temporary"
+                        classes={{
                             paper: classNames(classes.drawerPaper, !this.state.open && classes.drawerPaperClose),
                         }}
 
@@ -185,7 +178,7 @@ class MatAppBar extends Component {
                             <span className="version">
                                 { info.APPLICATION_VERSION }
                             </span>
-
+                            
                             <span className="parent-span">
                                 <IconButton onClick={this.handleDrawerClose}>
                                     {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
@@ -194,22 +187,16 @@ class MatAppBar extends Component {
                         </div>
 
                         <Divider />
-
+                        
                         <List>
                             {mailFolderListItems}
-                        </List>
-
-                        <Divider />
-
-                        <List>
-                            {otherMailFolderListItems}
                         </List>
 
                     </Drawer>
 
                 </div>
-            </Fragment>
 
+            </Fragment>
         );
     }
 }

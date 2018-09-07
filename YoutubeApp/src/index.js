@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import YTSearch from 'youtube-api-search'
 
-import AppNavigation from './components/common/app_navigation'
+import MatAppBar from './components/layout/mat_appbar'
 import SearchBar from './components/search/search_bar';
 import VideoList from './components/video/video_list'
 import VideoDetail from './components/video/video_detail';
@@ -43,7 +43,7 @@ class App extends Component {
 
         return (
             <div>
-                <AppNavigation />
+                <MatAppBar />
                 <SearchBar 
                     onSearchTermChange = { videoSearch } />
                 <VideoDetail 

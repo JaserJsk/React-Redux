@@ -1,4 +1,3 @@
-
 export const drawer = {
 
     DRAWER_WIDTH: 240,
@@ -7,7 +6,7 @@ export const drawer = {
 
 export const colors = {
 
-    APPBAR_COLOR: "#4CAF50",
+    APPBAR_COLOR: "#E62117",
 
     DRAWER_HEADER_COLOR: "#ecf0f1",
 
