@@ -1,53 +1,130 @@
-body {
-    background-color: #ecf0f1 !important;
+/* ****************************** */
+html, body { 
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
-
+.container {
+    width: 100%;
+    height: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+/* ****************************** */
 .version {
     margin-right: auto;
-    margin-left: 16px;
+	margin-left: 16px;
+	color: #ff0000;
+}
+.arrow {
+	color: #ff0000;
 }
 
-/* Drawer Background */
-.MatAppBar-drawerPaper-7 {
-    background-color: #ecf0f1 !important;
+/* ****************************** */
+/* Light Theme */
+.light_theme{
+    position:absolute;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 100% !important;
+    color: #121212;
+	background-color:#f1ecf1;
+}
+.light_drawer_theme{
+    height:100% !important;
+    background: #ecf0f1;
+}
+.light_drawer_theme ul svg 
+{
+	color: #898b8c !important;
+}
+.light_drawer_theme ul span {
+	color: #898b8c !important;
 }
 
-/* Youtube Player */
+/* ****************************** */
+/* Dark Theme */
+.dark_theme{
+    position:absolute;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 100% !important;
+    color: #ecf0f1;
+	background-color: #121212 !important;
+}
+.dark_drawer_theme{
+    height:100%;
+    background-color: #121212;
+}
+.dark_drawer_theme ul svg 
+{
+	color: #4c4c4c !important;
+}
+.dark_drawer_theme ul span {
+	color: #4c4c4c !important;
+}
+
+/* ****************************** */
+main{
+    padding: 100px 20px 35px 20px;
+}
+
+/* ****************************** */
 .search-bar {
-    margin-top: 100px;
-    margin-bottom: 50px;
     text-align: center;
 }
-
-.search-bar input {
+.light_theme .search-bar input {
     width: 75%;
+    border: 1px solid #dcdcdc;
+    background-color: #f1ecf1;
+}
+.dark_theme .search-bar input {
+    width: 75%;
+    border: 1px solid #252525;
+    background-color: #121212;
 }
 
 .video-item img {
     max-width: 64px;
 }
 
+/* ****************************** */
 .video-detail {
-    padding-bottom: 10px !important;
+    margin-top: 35px !important;
 }
-
 .video-detail .details {
-    margin-top: 10px;
     padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    border-radius: 0 0 5px 5px;
+}
+.light_theme .video-detail .details {
+    border: 1px solid #dcdcdc;
+}
+.dark_theme .video-detail .details {
+    border: 1px solid #252525;
 }
 
-.list-group {
-    padding-left: 15px !important;
-    padding-bottom: 15px !important;
+/* ****************************** */
+.list-group {    
+    margin-top: 35px !important;
+    padding-left: 12px !important;
+    
 }
-
 .list-group-item {
     padding: 10px !important;
     cursor: pointer;
 }
-
-.list-group-item:hover {
-    background-color: #ddd;
+.light_theme .list-group-item {
+    border: 1px solid #dcdcdc;
+    background-color: #eeeeee;
 }
+.light_theme .list-group-item:hover {
+    background-color: #dddddd;
+}
+.dark_theme .list-group-item {
+    border: 1px solid #252525;
+    background-color: #4c4c4c;
+}
+.dark_theme .list-group-item:hover {
+    background-color: #6b6b6b;
+}
+/* ****************************** */

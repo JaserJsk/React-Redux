@@ -2,7 +2,7 @@ export const info = {
 
     APPLICATION_NAME: "Youtube App",
 
-    APPLICATION_VERSION: "Version 1.0.0",
+    APPLICATION_VERSION: "Version 1.0.1",
 
 };
 

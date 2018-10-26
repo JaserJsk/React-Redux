@@ -6,10 +6,7 @@ export const drawer = {
 
 export const colors = {
 
-    APPBAR_COLOR: "#E62117",
-
-    DRAWER_HEADER_COLOR: "#ecf0f1",
-
+    APPBAR_COLOR: "#ff0000",
 };
 
 export const margins = {

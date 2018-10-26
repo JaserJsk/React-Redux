@@ -1,17 +1,20 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import YTSearch from 'youtube-api-search'
+//import YTSearch from 'youtube-api-search'
 
-import MatAppBar from './components/layout/mat_appbar'
+import Application from './components/app'
+/*
 import SearchBar from './components/search/search_bar';
 import VideoList from './components/video/video_list'
 import VideoDetail from './components/video/video_detail';
 
 const API_KEY = 'AIzaSyDY5yVkRoQYC1TkfGgLC_at5kYQcwn_JHo';
+*/
 
 class App extends Component {
 
+    /*
     constructor(props) {
         super(props);
 
@@ -36,12 +39,17 @@ class App extends Component {
         });
 
     }
+    */
 
     render() {
 
-        const videoSearch = _.debounce( (term) => { this.videoSearch(term) }, 300 )
+        //const videoSearch = _.debounce( (term) => { this.videoSearch(term) }, 300 )
 
         return (
+
+            <Application />
+
+            /*
             <div>
                 <MatAppBar />
                 <SearchBar 
@@ -52,6 +60,7 @@ class App extends Component {
                     videos = { this.state.videos }
                     onVideoSelect = { selectedVideo => this.setState({ selectedVideo }) } />
             </div>
+        */
         );
     }
 }

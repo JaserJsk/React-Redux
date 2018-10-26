@@ -2,7 +2,7 @@ import React from 'react';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 
-import { drawer_items } from '../../constants/content';
+import { drawer_items } from '../constants/content';
 
 import ListItemText from '@material-ui/core/ListItemText';
 import Youtube from 'mdi-material-ui/Youtube';
