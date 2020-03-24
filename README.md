@@ -1,1 +1,1 @@
-React & Redux Projects Created By Jonas Jsk [Jonas.Jsk@outlook.com]
+React & Redux Projects Created By Jaser Jsk [Jaser.Jsk@gmail.com]
